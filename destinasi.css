@@ -1,0 +1,472 @@
+@import url(./variables.css);
+@import url(./swiper1.css);
+
+:root {
+  --full-view-height: 100vh;
+  --white-100: #fff; /* Set your desired white color */
+  --text-dark: #333; /* Set your desired dark text color */
+  --text-light: #fff; /* Set your desired light text color */
+  --shadow-black-30: rgba(0, 0, 0, 0.3); /* Set your desired shadow color */
+  --default-duration: 0.3s; /* Set your desired default transition duration */
+  --padding-1: 20px; /* Set your desired padding value */
+  --padding-2: 40px; /* Set your desired padding value */
+  --font-size-1: 16px; /* Set your desired font size */
+  --font-size-2: 24px; /* Set your desired font size */
+  --font-family-monserrrat: "Montserrat", sans-serif; /* Set your desired font-family */
+  --font-sime-bold: bold; /* Set your desired font weight */
+  --header-height: 80px; /* Set your desired header height */
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: var(--font-family-monserrrat);
+}
+body {
+  background-color: #cbd5e1;
+}
+
+/*=============== header ===============*/
+.header {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  height: var(--header-height);
+  transition: background var(--default-duration) ease;
+  z-index: 1;
+}
+.header__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 2rem;
+  height: 100%;
+  padding-inline: var(--padding-1);
+}
+.header__logo {
+  display: flex;
+  justify-content: left;
+  position: absolute;
+  left: 55px;
+  width: 100%;
+  z-index: 1;
+  font-family: var(--header-font);
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+}
+#icon {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  padding-top: 20px;
+  justify-content: right;
+  text-align: right;
+}
+.header__links {
+  list-style: none;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 350px;
+  z-index: 2;
+  font-size: 40px;
+}
+.header__link a {
+  position: relative;
+  font-size: calc(var(--font-size-1) * 1.1);
+  font-weight: var(--font-sime-bold);
+  text-transform: capitalize;
+  color: var(--text-light);
+}
+
+.header__link::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2.5px;
+  bottom: -5px;
+  background-color: var(--white-100);
+  transition: width var(--default-duration);
+}
+
+.header__link a:hover::before {
+  width: 50%;
+}
+@media screen and (max-width: 992px) {
+  .header__links {
+    display: none;
+  }
+  .header__logo {
+    position: static;
+    justify-content: start;
+    color: black;
+    font-weight: bold;
+  }
+  .header__menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+  }
+  .header__menu-icon span {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    border-radius: var(--border-rounded);
+    transition: width var(--default-duration) ease;
+  }
+  .header__menu-icon span:nth-child(2) {
+    width: 50%;
+  }
+  .header__menu-icon:hover span:nth-child(2) {
+    width: 100%;
+  }
+  .header__links-mobile {
+    background-color: #3498db; /* Set your desired background color */
+    padding: var(--padding-1);
+    display: none;
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    z-index: 2; /* Ensure the menu is above the content */
+  }
+
+  .header__links-mobile {
+    padding: var(--padding-1);
+  }
+  .close-icon {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: var(--font-size-1-5);
+    color: var(--white-100);
+    cursor: (pointer);
+    transition: transform var(--default-duration) ease;
+  }
+  .close-icon:hover {
+    transform: rotate(180deg);
+  }
+  .header__menu-icon:hover + .header__links-mobile {
+    height: auto; /* Show the menu on icon hover */
+  }
+
+  #mobileMenuIcon:hover {
+    cursor: pointer;
+  }
+}
+/*=============== home ===============*/
+.home {
+  height: var(--full-view-height);
+  position: relative;
+  overflow: hidden;
+}
+.home__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 3rem;
+  height: 100%;
+}
+.home__slider-wrapper {
+  z-index: 0;
+}
+.home__slider,
+.home__slider-wrapper {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: opacity var(--default-duration) ease;
+}
+.home__slide {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity var(--default-duration) ease;
+}
+.home__slide_image {
+  width: 110%; /* Menggunakan 120% dari lebar parent */
+  height: 110%; /* Menggunakan 120% dari tinggi parent */
+  object-fit: cover;
+}
+.home__slide__image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--shadow-black-30);
+}
+.home__slide__text {
+  width: 50%;
+  position: absolute;
+  padding-left: clamp(var(--padding-1) / 2, 3vw, var(--padding-2));
+}
+.home__slide__text .heading {
+  font-size: clamp(var(--font-size-1) * 1.3, 3vw, var(--font-size-2));
+  color: var(--text-light);
+  margin-bottom: var(--margin-2);
+}
+.home__slide__text .text {
+  line-height: 1.5rem;
+  font-size: clamp(var(--font-size-1), 3vw, var(--font-size-1-5) / 1.2);
+  color: var(--text-light);
+  max-width: 500px;
+}
+.home__slide.active {
+  opacity: 1;
+  z-index: 5;
+}
+.home__slide.active .home__slide__text {
+  z-index: 5;
+  animation: reveal var(--default-duration) forwards;
+}
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/* Thumbnails */
+
+.home__thumbnails {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 50%;
+  right: 0;
+  z-index: 10;
+}
+
+.home__thumbnails-wrapper {
+  display: flex;
+  align-items: center;
+  padding: var(--padding-1);
+}
+
+.home__thumbnail {
+  border-radius: var(--border-10);
+  overflow: hidden;
+  height: 300px;
+  box-shadow: var(--shadow-primary);
+}
+
+.home__thumbnail__image {
+  height: 100%;
+  width: 100%;
+}
+
+.home__thumbnail.swiper-slide-active {
+  width: 230px !important;
+  height: 330px !important;
+  transition: width var(--default-duration) ease,
+    height var(--default-duration) ease;
+}
+
+@media screen and (max-width: 768px) {
+  .home__slide__text {
+    width: 100%;
+  }
+}
+.home__btn {
+  position: absolute;
+  top: 80%;
+  left: clamp(var(--padding-1) / 2, 3vw, var(--padding-2));
+  z-index: 10;
+}
+.home__btn:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  min-height: var(--full-view-height);
+  position: relative;
+  padding-block: var(--header-height) var(--padding-1); /* Add padding for top and bottom */
+  overflow: hidden;
+}
+
+.about__container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 2rem;
+  padding-inline: var(--padding-1);
+}
+
+.about__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.about__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about__text .heading {
+  font-size: clamp(var(--font-size-1) * 1.3, 3vw, var(--font-size-2) / 1.3);
+  color: var(--text-dark);
+}
+#about2 .about__content {
+  flex-direction: row-reverse;
+}
+
+#about2 .about__text {
+  text-align: left; /* Align text to the left */
+}
+.about__text .text {
+  line-height: 1.5em;
+  font-size: clamp(var(--font-size-1), 3vw, var(--font-size-1-5) / 1.2);
+  color: var(--text-dark);
+}
+
+.about__image {
+  width: 100%;
+  max-width: 500px;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px; /* Menambahkan sudut yang lebih round */
+}
+
+.about__image img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-out;
+}
+
+.about__image:hover img {
+  transform: scale(1.2); /* Efek zoom saat kursor berada di atasnya */
+}
+
+/* Menggunakan ::before untuk membuat pinggiran */
+.about__image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid #fff; /* Warna pinggiran yang diinginkan */
+  box-sizing: border-box;
+  border-radius: 10px; /* Menyesuaikan sudut round yang sudah ditentukan di .about__image */
+}
+
+/* Responsive styles for About section */
+@media screen and (max-width: 992px) {
+  .about__container {
+    align-items: center;
+  }
+  .about__content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+body.night-mode {
+  background-color: black;
+  color: white;
+}
+
+.header__links,
+.home__slide__text,
+.home__btn {
+  color: white !important;
+}
+.header__link.with-dropdown {
+  position: relative;
+}
+
+.header__link.with-dropdown a {
+  position: relative;
+  overflow: hidden;
+}
+
+.header__link.with-dropdown a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s ease-in-out;
+}
+
+.header__link.with-dropdown a:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+.header__link.with-dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.header__link.with-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.header__link.with-dropdown .dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.header__link.with-dropdown .dropdown-content a:hover {
+  background-color: #e9c675;
+  color: #fff;
+}
+.header__link.with-dropdown:hover .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Dropdown content */
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  background-color: #fff; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  padding: 10px;
+}
+
+
+.dropdown-content:hover {
+  background-color: #e9c675;
+}
+
+
