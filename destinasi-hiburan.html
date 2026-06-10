@@ -1,157 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="destinasi.css" />
+  <title>Destinasi Hiburan</title>
+</head>
 
-    <link rel="stylesheet" href="destinasi.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <header class="header" id="home">
-      <!-- navigation -->
-      <nav class="header__container container">
-        <div class="header__logo">
-          <a href="homepage.html">JOGJA</a>
-        </div>
-        <ul class="header__links">
-            <li class="header__link with-dropdown" id="destinasi">
-              <a href="destinasi-alamfix.html">destinasi</a>
-              <div class="dropdown-content">
-                <a href="destinasi-alam.html">alam</a>
-                <a href="destinasi-sejarah.html">sejarah</a>
-                <a href="destinasi-belanja.html">belanja</a>
-                <a href="destinasi-hiburan.html">hiburan</a>
-              </div>
-            </li>
-            <li class="header__link with-dropdown" id="kuliner">
-              <a href="#">kuliner</a>
-              <div class="dropdown-content">
-                <a href="makanantradisional.html">makanan tradisional</a>
-                <a href="streetfood.html">streetfood</a>
-                <a href="restoran.html">cafe</a>
-              </div>
-            </li>
-            <li class="header__link with-dropdown" id="akomodasi">
-              <a href="#">akomodasi</a>
-              <div class="dropdown-content">
-                <a href="hotel.html">hotel</a>
-                <a href="transportasi.html">transportasi</a>
-              </div>
-            </li>
-          </ul>
-        <div class="header__menu-icon" id="mobileMenuIcon">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </nav>
-    </header>
+<body>
 
-    <section class="home" id="home">
-      <div class="home__content">
-        <div class="home__slider">
-          <div class="home__slider-wrapper">
-            <div class="home__slide active">
-              <div class="home__slide_image">
-                <img src="image/jogjabay.jpg" alt="" />
-              </div>
-              <div class="home__slide__text">
-                <div class="heading">
-                  <h1>Rekomendasi tempat liburan di kota Yogyakarta</h1>
-                </div>
-                <div class="text">
-                  Jelajahi pesona magis Jogja dengan kekayaan budayanya
-                </div>
-              </div>
-          </div>
-        </div>
-        <div class="home__thumbnails swiper">
-          <div class="home__thumbnails-wrapper swiper-wrapper">
-            <div class="home__thumbnail swiper-slide">
-              <div class="home__thumbnail__image">
-                <img src="image/jogjabay.jpg" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <a href="#about1" class="home__btn cta-btn primary-btn"
-          ><br />Start Exploring</a
-        >
-      </div>
-    </section>
+  <header
+    class="header_alam"
+    id="home"
+    style="--header-bg: url('image/jogjabay.jpg');"
+  >
 
-    <section class="about" id="about1">
-      <div class="about__container container">
-        <div class="about__content">
-          <div class="about__text">
-            <div class="heading">
-              <h1>
-                Berenang dengan berbagai wahana <br />
-                Jogja Bay
-              </h1>
+    <nav>
+      <div class="nav__bar">
+        <div class="logo nav__logo">
+          <a href="index.html">JOGJA</a>
+        </div>
+
+        <ul class="nav__links" id="nav-links">
+
+          <li class="dropdown-nav">
+            <a href="#" class="dropbtn">DESTINASI</a>
+            <div class="dropdown-content">
+              <a href="destinasi-alam.html">Alam</a>
+              <a href="destinasi-sejarah.html">Sejarah</a>
+              <a href="destinasi-belanja.html">Belanja</a>
+              <a href="destinasi-hiburan.html">Hiburan</a>
             </div>
-            <div class="text">
-              <p>
-                Jogja Bay merupakan destinasi rekreasi keluarga terbesar di Yogyakarta, menawarkan beragam wahana seru, waterpark yang menegangkan, dan keindahan pantai buatan yang eksotis. Dengan suasana yang menyenangkan, Jogja Bay menjadi tempat ideal untuk berkumpul, bermain, dan menciptakan kenangan indah bersama keluarga dan teman. Nikmati liburan seru di Jogja Bay yang penuh kegembiraan dan kejutan di setiap sudutnya!
-              </p>
+          </li>
+
+          <li class="dropdown-nav">
+            <a href="#" class="dropbtn">KULINER</a>
+            <div class="dropdown-content">
+              <a href="makanantradisional.html">Makanan Tradisional</a>
+              <a href="restoran.html">Restoran</a>
+              <a href="streetfood.html">Streetfood</a>
             </div>
-          </div>
-          <div class="about__image">
-            <img src="image/jogjabay.jpg" alt="" />
-          </div>
+          </li>
+
+          <li class="dropdown-nav">
+            <a href="#" class="dropbtn">AKOMODASI</a>
+            <div class="dropdown-content">
+              <a href="hotel.html">Hotel</a>
+              <a href="transportasi.html">Transportasi</a>
+            </div>
+          </li>
+
+        </ul>
+
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-line"></i>
         </div>
       </div>
-    </section>
+    </nav>
 
-    <section class="about" id="about2">
-      <div class="about__container container">
-        <div class="about__content">
-          <div class="about__text">
-            <div class="heading">
-              <h1>
-                Bermain sambil Belajar <br />
-                Taman Pintar
-              </h1>
-            </div>
-            <div class="text">
-              <p>
-                Taman Pintar di Yogyakarta merupakan tempat wisata interaktif yang mendidik, menyajikan kombinasi antara hiburan dan pembelajaran. Dengan beragam eksperimen sains, wahana interaktif, dan pertunjukan edukatif, Taman Pintar menjadi destinasi favorit untuk belajar sambil bermain bagi semua usia. Suasana yang ramah dan inovatif membuat Taman Pintar menjadi tempat yang menyenangkan untuk mengeksplorasi dan merasakan pengalaman pendidikan yang unik.
-              </p>
-            </div>
-          </div>
-          <div class="about__image">
-            <img src="image/taman-pintar.jpg" alt="" />
-          </div>
+    <div class="section__container header__container">
+      <div class="header__content">
+        <h3 class="section__subheader">
+          Rekomendasi Untuk Anda
+        </h3>
+
+        <h1 class="section__header__utama">
+          Destinasi Hiburan Yogyakarta
+        </h1>
+
+        <div class="scroll__btn">
+          <a href="#about">
+            Scroll down
+            <span>
+              <i class="ri-arrow-down-line"></i>
+            </span>
+          </a>
         </div>
       </div>
-    </section>
 
-    <section class="about" id="about3">
-      <div class="about__container container">
-        <div class="about__content">
-          <div class="about__text">
-            <div class="heading">
-              <h1>
-                Bermain Gokart dan Wahana Ekstrim <br />
-                Kids Fun
-              </h1>
-            </div>
-            <div class="text">
-              <p>
-                Kidsfun di Yogyakarta bukan hanya sekadar taman bermain untuk anak-anak, tetapi juga menjadi destinasi yang menarik bagi semua kalangan, termasuk dewasa. Dengan beragam wahana dan aktivitas yang menghibur, Kidsfun menciptakan pengalaman rekreasi yang menyenangkan dan mengasyikkan untuk seluruh anggota keluarga. Terletak di lingkungan yang aman dan bersih, Kidsfun menjadi tempat yang cocok untuk berbagai generasi menikmati waktu bersama dalam suasana yang penuh keceriaan.
-              </p>
-            </div>
-          </div>
-          <div class="about__image">
-            <img src="image/kidsfun.jpg" alt="" />
-          </div>
+      <div class="header__socials">
+        <span>Follow us</span>
+
+        <a href="https://www.instagram.com/jogjaku">
+          <i class="ri-instagram-line"></i>
+        </a>
+
+        <a href="https://x.com/Jogja24Jam">
+          <i class="ri-twitter-x-line"></i>
+        </a>
+      </div>
+    </div>
+
+  </header>
+
+  <section class="about">
+    <div class="section__container about__container">
+
+      <div class="about__image about__image-1" id="about">
+        <img src="image/jogjabay.jpg" alt="Jogja Bay">
+      </div>
+
+      <div class="about__content about__content-1">
+        <h2 class="section__header">
+          Jogja Bay
+        </h2>
+
+        <p>
+          Jogja Bay merupakan destinasi rekreasi keluarga terbesar di Yogyakarta
+          yang menawarkan berbagai wahana air seru dan menantang. Dengan konsep
+          waterpark bertema bajak laut, pengunjung dapat menikmati kolam ombak,
+          seluncuran ekstrem, serta berbagai aktivitas menyenangkan yang cocok
+          untuk segala usia. Tempat ini menjadi pilihan favorit untuk
+          menghabiskan waktu bersama keluarga dan teman.
+        </p>
+
+        <div class="about__btn">
+          <a href="#">
+            Read More
+            <span>
+              <i class="ri-arrow-right-line"></i>
+            </span>
+          </a>
         </div>
       </div>
-    </section>
 
-   
+      <div class="about__image about__image-2">
+        <img src="image/taman-pintar.jpg" alt="Taman Pintar">
+      </div>
 
-    <script src="image/destinasi.js"></script>
-  </body>
+      <div class="about__content about__content-2">
+        <h2 class="section__header">
+          Taman Pintar
+        </h2>
+
+        <p>
+          Taman Pintar merupakan destinasi wisata edukatif yang menggabungkan
+          pembelajaran dengan hiburan interaktif. Pengunjung dapat mencoba
+          berbagai eksperimen sains, wahana edukasi, dan permainan yang
+          dirancang untuk meningkatkan pengetahuan dengan cara yang
+          menyenangkan. Tempat ini sangat cocok untuk anak-anak, pelajar,
+          maupun keluarga.
+        </p>
+
+        <div class="about__btn">
+          <a href="#">
+            Read More
+            <span>
+              <i class="ri-arrow-right-line"></i>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="about__image about__image-3">
+        <img src="image/kidsfun.jpg" alt="Kids Fun">
+      </div>
+
+      <div class="about__content about__content-3">
+        <h2 class="section__header">
+          Kids Fun
+        </h2>
+
+        <p>
+          Kids Fun menawarkan berbagai wahana permainan dan hiburan yang dapat
+          dinikmati oleh anak-anak maupun orang dewasa. Mulai dari gokart,
+          roller coaster, hingga berbagai permainan keluarga tersedia dalam
+          satu kawasan rekreasi yang aman dan nyaman. Suasana yang ceria
+          menjadikan Kids Fun sebagai salah satu destinasi hiburan keluarga
+          terbaik di Yogyakarta.
+        </p>
+
+        <div class="about__btn">
+          <a href="#">
+            Read More
+            <span>
+              <i class="ri-arrow-right-line"></i>
+            </span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="section__container footer__container">
+
+      <div class="footer__col">
+        <div class="logo footer__logo">
+          <a href="#">Jogja</a>
+        </div>
+
+        <span class="sosmed">
+          <a href="#"><i class="ri-instagram-line"></i></a>
+          <a href="#"><i class="ri-twitter-x-line"></i></a>
+          <a href="#"><i class="ri-tiktok-line"></i></a>
+        </span>
+      </div>
+
+      <div class="footer__col">
+        <h3>Destinasi</h3>
+
+        <ul class="footer__links">
+          <li><a href="destinasi-alam.html">Alam</a></li>
+          <li><a href="destinasi-belanja.html">Belanja</a></li>
+          <li><a href="destinasi-sejarah.html">Sejarah</a></li>
+          <li><a href="destinasi-hiburan.html">Hiburan</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3>Kuliner</h3>
+
+        <ul class="footer__links">
+          <li><a href="makanantradisional.html">Makanan Tradisional</a></li>
+          <li><a href="restoran.html">Restoran dan Cafe</a></li>
+          <li><a href="streetfood.html">Streetfood</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3>Akomodasi</h3>
+
+        <ul class="footer__links">
+          <li><a href="hotel.html">Hotel</a></li>
+          <li><a href="transportasi.html">Transportasi</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer__bar">
+      Copyright © 2024 AnakeBayu. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="main.js"></script>
+
+</body>
 </html>

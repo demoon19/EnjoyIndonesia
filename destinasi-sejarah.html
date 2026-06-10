@@ -1,180 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="destinasi.css" />
+  <title>Destinasi Sejarah</title>
+</head>
 
-    <link rel="stylesheet" href="destinasi.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <header class="header" id="home">
-      <!-- navigation -->
-      <nav class="header__container container">
-        <div class="header__logo">
-          <a href="homepage.html">JOGJA</a>
-        </div>
-        <ul class="header__links">
-            <li class="header__link with-dropdown" id="destinasi">
-              <a href="destinasi-alamfix.html">destinasi</a>
-              <div class="dropdown-content">
-                <a href="destinasi-alam.html">alam</a>
-                <a href="destinasi-sejarah.html">sejarah</a>
-                <a href="destinasi-belanja.html">belanja</a>
-                <a href="destinasi-hiburan.html">hiburan</a>
-              </div>
-            </li>
-            <li class="header__link with-dropdown" id="kuliner">
-              <a href="#">kuliner</a>
-              <div class="dropdown-content">
-                <a href="makanantradisional.html">makanan tradisional</a>
-                <a href="streetfood.html">streetfood</a>
-                <a href="restoran.html">cafe</a>
-              </div>
-            </li>
-            <li class="header__link with-dropdown" id="akomodasi">
-              <a href="#">akomodasi</a>
-              <div class="dropdown-content">
-                <a href="hotel.html">hotel</a>
-                <a href="transportasi.html">transportasi</a>
-              </div>
-            </li>
-          </ul>
-        <div class="header__menu-icon" id="mobileMenuIcon">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </nav>
-    </header>
+<body>
 
-    <section class="home" id="home">
-      <div class="home__content">
-        <div class="home__slider">
-          <div class="home__slider-wrapper">
-            <div class="home__slide active">
-              <div class="home__slide_image">
-                <img src="image/candi-prambanan.jpg" alt="" />
-              </div>
-              <div class="home__slide__text">
-                <div class="heading">
-                  <h1>Rekomendasi Tempat Sejarah di Yogyakarta</h1>
-                </div>
-                <div class="text">
-                  Nikmati sejarah dan kebudayaan yang ada di Yogyakarta
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="home__thumbnails swiper">
-          <div class="home__thumbnails-wrapper swiper-wrapper">
-            <div class="home__thumbnail swiper-slide">
-              <div class="home__thumbnail__image">
-                <img src="image/candi-prambanan.jpg" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <a href="#about1" class="home__btn cta-btn primary-btn"
-          ><br />Start Exploring</a
-        >
-      </div>
-    </section>
+  <header
+    class="header_alam"
+    id="home"
+    style="--header-bg: url('image/candi-prambanan.jpg');">
 
-    <section class="about" id="about1">
-      <div class="about__container container">
-        <div class="about__content">
-          <div class="about__text">
-            <div class="heading">
-              <h1>
-                Candi Hindu Termegah <br />
-                Candi Prambanan
-              </h1>
+    <nav>
+      <div class="nav__bar">
+        <div class="logo nav__logo">
+          <a href="index.html">JOGJA</a>
+        </div>
+
+        <ul class="nav__links" id="nav-links">
+
+          <li class="dropdown-nav">
+            <a href="#" class="dropbtn">DESTINASI</a>
+            <div class="dropdown-content">
+              <a href="destinasi-alam.html">Alam</a>
+              <a href="destinasi-sejarah.html">Sejarah</a>
+              <a href="destinasi-belanja.html">Belanja</a>
+              <a href="destinasi-hiburan.html">Hiburan</a>
             </div>
-            <div class="text">
-              <p>
-                Candi Prambanan, sebagai salah satu situs warisan dunia, memukau
-                pengunjung dengan arsitektur yang megah dan indah. Candi ini
-                menjadi saksi bisu kejayaan Kerajaan Mataram Kuno, mencerminkan
-                keagungan seni dan kepercayaan masyarakat Hindu pada masa lalu.
-                Dengan latar belakang pegunungan hijau dan suasana yang damai,
-                Candi Prambanan menjadi destinasi spiritual dan sejarah yang
-                mengesankan di Yogyakarta.
-              </p>
+          </li>
+
+          <li class="dropdown-nav">
+            <a href="#" class="dropbtn">KULINER</a>
+            <div class="dropdown-content">
+              <a href="makanantradisional.html">Makanan Tradisional</a>
+              <a href="restoran.html">Restoran</a>
+              <a href="streetfood.html">Streetfood</a>
             </div>
-          </div>
-          <div class="about__image">
-            <img src="image/candi-prambanan.jpg" alt="" />
-          </div>
+          </li>
+
+          <li class="dropdown-nav">
+            <a href="#" class="dropbtn">AKOMODASI</a>
+            <div class="dropdown-content">
+              <a href="hotel.html">Hotel</a>
+              <a href="transportasi.html">Transportasi</a>
+            </div>
+          </li>
+
+        </ul>
+
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-line"></i>
         </div>
       </div>
-    </section>
+    </nav>
 
-    <section class="about" id="about2">
-      <div class="about__container container">
-        <div class="about__content">
-          <div class="about__text">
-            <div class="heading">
-              <h1>
-                Benteng Perjuangan Rakyat Yogya <br />
-                Benteng Vredeburg
-              </h1>
-            </div>
-            <div class="text">
-              <p>
-                Benteng Vredeburg, dengan kokohnya dinding-dinding
-                bersejarahnya, adalah saksi bisu perjalanan panjang Indonesia
-                melawan penjajahan. Berlokasi strategis di pusat Kota
-                Yogyakarta, benteng ini menawarkan pengalaman memahami sejarah
-                perjuangan bangsa dan kemerdekaan. Melalui kumpulan artefak dan
-                pameran yang disajikan, pengunjung dapat meresapi atmosfer
-                heroik dan nilai-nilai nasionalisme yang tercermin di dalam
-                Benteng Vredeburg.
-              </p>
-            </div>
-          </div>
-          <div class="about__image">
-            <img src="image/benteng-vredeburg.jpg" alt="" />
-          </div>
+    <div class="section__container header__container">
+      <div class="header__content">
+        <h3 class="section__subheader">
+          Rekomendasi Untuk Anda
+        </h3>
+
+        <h1 class="section__header__utama">
+          Destinasi Sejarah Yogyakarta
+        </h1>
+
+        <div class="scroll__btn">
+          <a href="#about">
+            Scroll down
+            <span>
+              <i class="ri-arrow-down-line"></i>
+            </span>
+          </a>
         </div>
       </div>
-    </section>
 
-    <section class="about" id="about3">
-      <div class="about__container container">
-        <div class="about__content">
-          <div class="about__text">
-            <div class="heading">
-              <h1>
-                kerajaan Islam di Indonesia <br />
-                Kraton Yogyakarta
-              </h1>
-            </div>
-            <div class="text">
-              <p>
-                Kraton Jogja, sebuah kompleks istana yang anggun dan penuh
-                sejarah, memancarkan keindahan dan keagungan kebudayaan Jawa.
-                Dikelilingi oleh taman yang indah dan bangunan-bangunan
-                tradisional yang megah, Kraton Jogja menjadi saksi bisu dari
-                kejayaan kerajaan Mataram. Pengunjung dapat menikmati pesona
-                budaya, seni tradisional, dan kerajinan tangan yang berharga di
-                dalam Kraton Jogja, menciptakan pengalaman yang tak terlupakan.
-                Sebagai tempat yang masih dihuni oleh keluarga kerajaan, Kraton
-                Jogja juga memancarkan kehidupan istana yang autentik dan
-                mempertahankan kearifan lokal yang tak ternilai.
-              </p>
-            </div>
-          </div>
-          <div class="about__image">
-            <img src="image/kraton.jpg" alt="" />
-          </div>
+      <div class="header__socials">
+        <span>Follow us</span>
+
+        <a href="https://www.instagram.com/jogjaku">
+          <i class="ri-instagram-line"></i>
+        </a>
+
+        <a href="https://x.com/Jogja24Jam">
+          <i class="ri-twitter-x-line"></i>
+        </a>
+      </div>
+    </div>
+
+  </header>
+
+  <section class="about">
+    <div class="section__container about__container">
+
+      <div class="about__image about__image-1" id="about">
+        <img src="image/candi-prambanan.jpg" alt="Candi Prambanan">
+      </div>
+
+      <div class="about__content about__content-1">
+        <h2 class="section__header">
+          Candi Prambanan
+        </h2>
+
+        <p>
+          Candi Prambanan merupakan kompleks candi Hindu terbesar di Indonesia
+          yang dibangun pada abad ke-9. Sebagai situs warisan dunia UNESCO,
+          candi ini menampilkan arsitektur megah yang menggambarkan kejayaan
+          Kerajaan Mataram Kuno. Keindahan relief dan kisah Ramayana yang
+          terukir pada dinding candi menjadi daya tarik utama bagi wisatawan.
+        </p>
+
+        <div class="about__btn">
+          <a href="#">
+            Read More
+            <span>
+              <i class="ri-arrow-right-line"></i>
+            </span>
+          </a>
         </div>
       </div>
-    </section>
 
-    
+      <div class="about__image about__image-2">
+        <img src="image/benteng-vredeburg.jpg" alt="Benteng Vredeburg">
+      </div>
 
-    <script src="destinasi.js"></script>
-  </body>
+      <div class="about__content about__content-2">
+        <h2 class="section__header">
+          Benteng Vredeburg
+        </h2>
+
+        <p>
+          Benteng Vredeburg merupakan bangunan bersejarah yang terletak di pusat
+          Kota Yogyakarta. Dahulu digunakan sebagai benteng pertahanan oleh
+          pemerintah kolonial Belanda, kini tempat ini berfungsi sebagai museum
+          yang menyimpan berbagai diorama dan koleksi sejarah perjuangan bangsa
+          Indonesia.
+        </p>
+
+        <div class="about__btn">
+          <a href="#">
+            Read More
+            <span>
+              <i class="ri-arrow-right-line"></i>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="about__image about__image-3">
+        <img src="image/kraton.jpg" alt="Kraton Yogyakarta">
+      </div>
+
+      <div class="about__content about__content-3">
+        <h2 class="section__header">
+          Kraton Yogyakarta
+        </h2>
+
+        <p>
+          Kraton Yogyakarta merupakan pusat kebudayaan Jawa sekaligus kediaman
+          resmi Sultan Yogyakarta. Kompleks istana ini menyimpan berbagai
+          peninggalan sejarah, koleksi benda bersejarah, serta tradisi budaya
+          yang masih dilestarikan hingga saat ini. Kraton menjadi simbol
+          penting dari perjalanan sejarah dan budaya Yogyakarta.
+        </p>
+
+        <div class="about__btn">
+          <a href="#">
+            Read More
+            <span>
+              <i class="ri-arrow-right-line"></i>
+            </span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="section__container footer__container">
+
+      <div class="footer__col">
+        <div class="logo footer__logo">
+          <a href="#">Jogja</a>
+        </div>
+
+        <span class="sosmed">
+          <a href="#"><i class="ri-instagram-line"></i></a>
+          <a href="#"><i class="ri-twitter-x-line"></i></a>
+          <a href="#"><i class="ri-tiktok-line"></i></a>
+        </span>
+      </div>
+
+      <div class="footer__col">
+        <h3>Destinasi</h3>
+
+        <ul class="footer__links">
+          <li><a href="destinasi-alam.html">Alam</a></li>
+          <li><a href="destinasi-belanja.html">Belanja</a></li>
+          <li><a href="destinasi-sejarah.html">Sejarah</a></li>
+          <li><a href="destinasi-hiburan.html">Hiburan</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3>Kuliner</h3>
+
+        <ul class="footer__links">
+          <li><a href="makanantradisional.html">Makanan Tradisional</a></li>
+          <li><a href="restoran.html">Restoran dan Cafe</a></li>
+          <li><a href="streetfood.html">Streetfood</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3>Akomodasi</h3>
+
+        <ul class="footer__links">
+          <li><a href="hotel.html">Hotel</a></li>
+          <li><a href="transportasi.html">Transportasi</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer__bar">
+      Copyright © 2024 AnakeBayu. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="main.js"></script>
+
+</body>
 </html>
